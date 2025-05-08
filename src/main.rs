@@ -20,4 +20,35 @@ fn main() {
     v[j] ^= v[i];
     v[i] ^= v[j];
     println!("{:?}", v);
+
+    let number = if true {
+        5
+    } else {
+        6
+    };
+    println!("Number is {}", number);
+
+    let d1 = Direction::East;
+    let d2 = Direction::West;
+    let d3 = Direction::North;
+    let d4 = Direction::South;
+    direction_match(d1);
+    direction_match(d2);
+    direction_match(d3);
+    direction_match(d4);
+}
+
+enum Direction {
+    East,
+    West,
+    North,
+    South
+}
+
+fn direction_match(direction :Direction) {
+    match direction {
+        Direction::East => println!("East"),
+        Direction::West => println!("West"),
+        Direction::North | Direction::South => println!("North or South"),
+    };
 }
