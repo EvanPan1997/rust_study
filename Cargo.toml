@@ -1,6 +1,12 @@
-[package]
+[workspace]
+members=["base", "match_util"]
+resolver = "2"
+
+[workspace.package]
 name = "rust_study"
 version = "0.1.0"
-edition = "2021"
+authors = ["Evan.Pan"]
+edition = "2024"
 
-[dependencies]
+[workspace.dependencies]
+match_util = {package = "match_util", version = "0.1.0"}

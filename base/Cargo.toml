@@ -1,0 +1,8 @@
+[package]
+name = "base"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+match_util = { path = "../match_util", version = "0.1.0" }

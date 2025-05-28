@@ -1,3 +1,5 @@
+use match_util;
+
 fn main() {
     println!("{}", 98_001);
     println!("{}", 0x11);
@@ -28,27 +30,12 @@ fn main() {
     };
     println!("Number is {}", number);
 
-    let d1 = Direction::East;
-    let d2 = Direction::West;
-    let d3 = Direction::North;
-    let d4 = Direction::South;
-    direction_match(d1);
-    direction_match(d2);
-    direction_match(d3);
-    direction_match(d4);
-}
-
-enum Direction {
-    East,
-    West,
-    North,
-    South
-}
-
-fn direction_match(direction :Direction) {
-    match direction {
-        Direction::East => println!("East"),
-        Direction::West => println!("West"),
-        Direction::North | Direction::South => println!("North or South"),
-    };
+    let d1 = match_util::Direction::East;
+    let d2 = match_util::Direction::West;
+    let d3 = match_util::Direction::North;
+    let d4 = match_util::Direction::South;
+    match_util::direction_match(d1);
+    match_util::direction_match(d2);
+    match_util::direction_match(d3);
+    match_util::direction_match(d4);
 }
