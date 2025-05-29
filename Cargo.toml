@@ -1,5 +1,5 @@
 [workspace]
-members=["base", "match_util"]
+members=["base", "match_util", "pub_lib"]
 resolver = "2"
 
 [workspace.package]
