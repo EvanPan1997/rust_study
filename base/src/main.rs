@@ -1,4 +1,5 @@
 use match_util::*;
+use pub_lib;
 
 fn main() {
     println!("{}", 98_001);
@@ -7,9 +8,9 @@ fn main() {
     println!("{}", 0b0000_0010);
     println!("{}", b'A');
     let x = '中';
-    println!("字符'中'占用了{}字节的内存大小",std::mem::size_of_val(&x));
+    println!("字符'中'占用了{}字节的内存大小", std::mem::size_of_val(&x));
 
-    let mut v = vec![1,2,3,4,5];
+    let mut v = vec![1, 2, 3, 4, 5];
     v.push(1);
     println!("{:?}", v);
 

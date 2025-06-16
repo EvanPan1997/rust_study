@@ -1,5 +1,5 @@
 [workspace]
-members=["base", "match_util", "pub_lib"]
+members=[ "analyzer","base", "match_util", "pub_lib"]
 resolver = "2"
 
 [workspace.package]
@@ -9,4 +9,5 @@ authors = ["Evan.Pan"]
 edition = "2024"
 
 [workspace.dependencies]
-match_util = {package = "match_util", version = "0.1.0"}
+match_util = {path = "./match_util", version = "0.1.0"}
+analyzer = {path = "./analyzer", version = "0.1.0", features = ["analyzer"]}
