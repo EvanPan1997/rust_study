@@ -1,5 +1,24 @@
 use match_util::*;
 
+#[derive(Debug)]
+struct Rectangle {
+    width: i32,
+    height: i32,
+}
+
+impl Rectangle {
+    fn new(width:i32, height:i32) -> Rectangle {
+        Rectangle{
+            width,
+            height,
+        }
+    }
+
+    fn area(&self) -> i32 {
+        self.height * self.width
+    }
+}
+
 fn main() {
     println!("{}", 98_001);
     println!("{}", 0x11);
@@ -38,4 +57,7 @@ fn main() {
     direction_match(d2);
     direction_match(d3);
     direction_match(d4);
+
+    let rectangle = Rectangle::new(10, 10);
+    println!("{}", rectangle.area());
 }
