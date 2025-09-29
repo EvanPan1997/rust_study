@@ -3,7 +3,6 @@ members=["base", "collection", "lifecycle", "match_util", "pub_lib"]
 resolver = "2"
 
 [workspace.package]
-name = "rust_study"
 version = "0.1.0"
 authors = ["Evan.Pan"]
 edition = "2024"
